@@ -1,0 +1,5 @@
+#put either true or false if you want a password for this command to be run
+require-password-to-run: false
+#Input your password, password MUST be 4+ characters long and must NOT be 'password'
+#Password should not contain spaces!
+password: "password"

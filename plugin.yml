@@ -1,0 +1,17 @@
+name: Eval
+main: Zedstar16\evaluate\Main
+version: 1.0.0
+api: 3.5.0
+load: POSTWORLD
+author: Zedstar16
+description: Download files from URLs to your server
+website: https://github.com/zedstar16/Eval
+
+commands:
+ eval:
+  description: "Execute PHP Code"
+  permission: eval
+
+permissions:
+ eval:
+  default: op
