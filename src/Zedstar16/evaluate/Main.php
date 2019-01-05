@@ -44,7 +44,7 @@ class Main extends PluginBase{
                         array_shift($args);
                         $this->evaluate($sender, $args);
                     }else $sender->sendMessage(TextFormat::RED."Incorrect password, it is Case-Sensitive");
-                }//else$this->evaluate($sender, $args);
+                }else $this->evaluate($sender, $args);
 
             }else $sender->sendMessage("Please provide some code to run");
         }
