@@ -1,7 +1,7 @@
 # Eval
 Pretty simple plugin as always :D
 
-This plugins gives a /eval command
+This plugin gives a /eval command
 
 /eval is used to execute php code in game, the plugin catches most errors, and sends the error message to you.
 
