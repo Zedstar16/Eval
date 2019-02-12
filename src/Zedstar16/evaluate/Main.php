@@ -9,7 +9,8 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
-
+use pocketmine\Player;
+use pocketmine\math\Vector3;
 class Main extends PluginBase{
 
 	public function onEnable() : void{
@@ -32,6 +33,14 @@ class Main extends PluginBase{
             $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
         }catch(\ErrorException $e) {
             $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
+        }catch(\Error $e) {
+            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
+        }catch(\BadMethodCallException $e) {
+            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
+        }catch(\BadFunctionCallException $e) {
+            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
+        }catch(\Exception $e) {
+            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
         }
     }
 
@@ -50,6 +59,5 @@ class Main extends PluginBase{
         }
 	return true;
 	}
-
-
+	
 }
