@@ -10,8 +10,12 @@ use pocketmine\command\Command;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
+use pocketmine\utils;
+use pocketmine\level\Position;
 use pocketmine\math\Vector3;
+
 class Main extends PluginBase{
+	
 
 	public function onEnable() : void{
 	    $this->saveResource("config.yml");
