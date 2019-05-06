@@ -24,7 +24,7 @@ class Main extends PluginBase{
 		if($cfg->get("require-password-to-run") === true && $cfg->get("password") == "password" || strlen($cfg->get("password")) < 4){
 		    $this->getLogger()->critical("The Password to execute /eval must not be \"Password\" and must be more than 4 characters long");
 		    $plmgr = $this->getServer()->getPluginManager();
-            $plmgr->disablePlugin($plmgr->getPlugin("Eval"));
+            $plmgr->disablePlugin($this);
         }
 	}
 
