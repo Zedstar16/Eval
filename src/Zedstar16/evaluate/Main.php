@@ -31,6 +31,7 @@ class Main extends PluginBase{
 	public function evaluate(CommandSender $sender, array $args){
         try{
             eval(implode(" ", $args));
+            $sender->sendMessage(TextFormat::AQUA . “Executing Code”);
         }catch(\ParseError $e){
             $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
         }catch(\UnexpectedValueException $e){
