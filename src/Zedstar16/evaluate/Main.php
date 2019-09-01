@@ -32,19 +32,7 @@ class Main extends PluginBase{
         try{
             eval(implode(" ", $args));
             $sender->sendMessage(TextFormat::AQUA . "Executing Code");
-        }catch(\ParseError $e){
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\UnexpectedValueException $e){
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\ErrorException $e) {
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\Error $e) {
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\BadMethodCallException $e) {
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\BadFunctionCallException $e) {
-            $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
-        }catch(\Exception $e) {
+        }catch(\Throwable $e){
             $sender->sendMessage(TextFormat::RED . "Error: " . TextFormat::RESET . $e->getMessage());
         }
     }
