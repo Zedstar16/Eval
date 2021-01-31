@@ -11,5 +11,7 @@ By default this command is only available to OPs, however you can edit the confi
 
 You can use most predefined variables in this command such as $this->getServer() or whatever and $sender (You)
 
-You can import classes to use when you are eval'ing code, for example `$player->sendMessage(\pocketmine\utils\TextFormat::GREEN."hi");`
+In order to import classes you must escape the `\` char
+
+For example `$player->sendMessage(\\pocketmine\\utils\\TextFormat::GREEN."hi");`
 
