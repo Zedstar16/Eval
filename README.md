@@ -15,3 +15,22 @@ In order to import classes you must escape the `\` char
 
 For example `$player->sendMessage(\\pocketmine\\utils\\TextFormat::GREEN."hi");`
 
+## More code examples
+
+- Return a list of all online players separated by 
+```php
+return implode(", ", array_map(function ($player){
+    return $player->getName();
+}, $this->getServer()->getOnlinePlayers()));
+```
+
+- Run a command as console
+```php
+ $this->getServer()->dispatchCommand(new \\pocketmine\\command\\ConsoleCommandSender(), 'say hello world');
+ ```
+ 
+ - Do some simple addition and send the answer to yourself
+```php
+return 46+69+21;
+```
+
