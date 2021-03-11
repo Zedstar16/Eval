@@ -33,8 +33,6 @@ class Main extends PluginBase
     public function evaluate(CommandSender $sender, array $args)
     {
         try {
-            $code = implode(" ", array_slice($args, 2));
-            $code = str_replace(["“", "”", '"'], "'", $code);
             $result = eval($code);
             if ($result !== null) {
                 if (!is_string($result)) {
